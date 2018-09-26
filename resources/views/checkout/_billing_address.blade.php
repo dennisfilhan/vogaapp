@@ -12,13 +12,13 @@
 
 <div class="form-group form-group-sm row{{ $errors->has('billpayer.address.address') ? ' has-danger' : '' }}">
 
-    <label class="form-control-label col-md-2">{{ __('Address') }}</label>
+    <label class="form-control-label col-md-2">{{ __('Email Address') }}</label>
     <div class="col-md-10">
         {{ Form::text('billpayer[address][address]', null, ['class' => 'form-control']) }}
     </div>
 </div>
 
-<div class="form-group form-group-sm row{{ $errors->has('billpayer.address.postalcode') ? ' has-danger' : '' }}">
+<div class="hide form-group form-group-sm row{{ $errors->has('billpayer.address.postalcode') ? ' has-danger' : '' }}">
 
     <label class="form-control-label col-md-2">{{ __('Zip code') }}</label>
     <div class="col-md-4">

@@ -104,7 +104,7 @@
                 <a href="{{ route('register') }}" class="btn btn-dark active">Register</a>
             @else
                 @role('admin')
-                <a href="#admin" class="nav-link text-uppercase">Admin</a>
+                <a href="{{ config('konekt.app_shell.ui.url') }}" class="nav-link text-uppercase">Admin</a>
                 @endrole
                 <a href="#" class="btn amado-btn mb-15 rounded"><b class="fa fa-user"></b> {{ Auth::user()->name }}</a>
                 <a href="{{ route('register') }}" class="btn btn-sm btn-dark active" onclick="event.preventDefault();

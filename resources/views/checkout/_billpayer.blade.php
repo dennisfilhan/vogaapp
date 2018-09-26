@@ -32,7 +32,7 @@
 </div>
 
 
-<div class="form-group form-group-sm{{ $errors->has('type') ? ' has-danger' : '' }}">
+<div class="hide form-group form-group-sm{{ $errors->has('type') ? ' has-danger' : '' }}">
     <div class="checkbox">
         <label>
             {{ Form::checkbox('billpayer[is_organization]', 1, null, [

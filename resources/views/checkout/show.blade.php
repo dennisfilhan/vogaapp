@@ -21,14 +21,26 @@
                             </div>
                         @endunless
 
+
+                        <div class="row">
+                            <div class="alert alert-warning">
+                                <p>Ooops.. maaf, sepertinya VOGA belum dapat untuk
+                                    melakukan pembayaran, dikarenakan sistem pembayaran yang masih belum
+                                    terintegrasi.</p>
+                                <p>Lakukan pembayaran melalui kontrak admin VOGA yang tersedia. Disediakan jendela chat di halaman awal.</p>
+                            </div>
+
+                            <div class="alert alert-info">Mohon untuk di isi form dibawah untuk pendaataan singkat. Terimakasih.</div>
+                        </div>
+
                         @if ($checkout)
                             <form id="checkout" action="{{ route('checkout.submit') }}" method="post">
                                 {{ csrf_field() }}
 
                                 @include('checkout._billpayer', ['billpayer' => $checkout->getBillPayer()])
 
-                                <div>
-                                    <input type="hidden" name="ship_to_billing_address" value="0" />
+                                <div class="hide">
+                                    <input type="hidden" name="ship_to_billing_address" value="0"/>
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="ship_to_billing_address" value="1"
@@ -62,17 +74,17 @@
 
 @section('scripts')
     @if ($checkout)
-    <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
-            new Vue({
-                el: '#checkout',
-                data: {
-                    isOrganization: {{ old('billpayer.is_organization') ?: 0 }},
-                    shipToBillingAddress: {{ old('ship_to_billing_address') ?? 1 }}
-                }
+        <script>
+            document.addEventListener("DOMContentLoaded", function (event) {
+                new Vue({
+                    el: '#checkout',
+                    data: {
+                        isOrganization: {{ old('billpayer.is_organization') ?: 0 }},
+                        shipToBillingAddress: {{ old('ship_to_billing_address') ?? 1 }}
+                    }
+                });
             });
-        });
-    </script>
+        </script>
     @endif
 @stop
 
