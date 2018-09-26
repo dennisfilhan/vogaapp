@@ -73,11 +73,14 @@
                 <div class="single-products-catagory clearfix">
                     <a href="{{ route('shop.product', $product) }}">
                         {{--<img src="{{asset('amado/')}}/img/bg-img/1.jpg" alt="">--}}
-                        @if($product->hasImage())
-                            <img src="{{ $product->getThumbnailUrl() }}"/>
-                        @else
-                            <img src="/images/product.jpg"/>
-                    @endif
+                        {{--@if($product->hasImage())--}}
+                            {{--<img src="{{ $product->getThumbnailUrl() }}"/>--}}
+                        {{--@else--}}
+                        @php
+                        $img = ['examples/card1.jpg','examples/card2.jpg','examples/card3.jpg','product.jpg'];
+                        @endphp
+                            <img src="{{asset('images/')}}/{{$img[rand(0,3)]}}"/>
+                    {{--@endif--}}
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>

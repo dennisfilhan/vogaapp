@@ -86,7 +86,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a class="gallery_img" href="{{asset('amado/')}}/img/product-img/pro-big-1.jpg">
-                                        <img class="d-block w-100" src="{{asset('amado/')}}/img/product-img/pro-big-1.jpg" alt="First slide">
+                                        <img class="d-block w-100" src="{{asset('images/examples/card2.jpg')}}" alt="First slide">
                                     </a>
                                 </div>
                                 {{--<div class="carousel-item">--}}
