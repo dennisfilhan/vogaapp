@@ -158,4 +158,6 @@
         </div>
     </div>
     <!-- Product Details Area End -->
+
+    <div class="clearfix mb-50"></div>
 @endsection

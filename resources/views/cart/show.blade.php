@@ -154,4 +154,6 @@
         </div>
     </div>
 
+    <div class="clearfix mb-50"></div>
+
 @endsection

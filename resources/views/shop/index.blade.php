@@ -77,7 +77,7 @@
                             {{--<img src="{{ $product->getThumbnailUrl() }}"/>--}}
                         {{--@else--}}
                         @php
-                        $img = ['examples/card1.jpg','examples/card2.jpg','examples/card3.jpg','product.jpg'];
+                        $img = ['examples/card1.jpg','examples/card2.jpg','examples/card3.png','product.jpg'];
                         @endphp
                             <img src="{{asset('images/')}}/{{$img[rand(0,3)]}}"/>
                     {{--@endif--}}
@@ -93,4 +93,6 @@
         </div>
     </div>
     <!-- Product Catagories Area End -->
+
+    <div class="clearfix mb-50"></div>
 @endsection

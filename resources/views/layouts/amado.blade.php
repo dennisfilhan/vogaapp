@@ -103,6 +103,9 @@
                 <a href="{{ route('login') }}" class="btn amado-btn mb-15">Login</a>
                 <a href="{{ route('register') }}" class="btn btn-dark active">Register</a>
             @else
+                @role('admin')
+                <a href="#admin" class="nav-link text-uppercase">Admin</a>
+                @endrole
                 <a href="#" class="btn amado-btn mb-15 rounded"><b class="fa fa-user"></b> {{ Auth::user()->name }}</a>
                 <a href="{{ route('register') }}" class="btn btn-sm btn-dark active" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Logout</a>
@@ -197,6 +200,31 @@
 <script src="{{asset('amado/')}}/js/plugins.js"></script>
 <!-- Active js -->
 <script src="{{asset('amado/')}}/js/active.js"></script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5baba7e59d44382222fc068f/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=125258574"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GA_TRACKING_ID');
+</script>
 
 </body>
 
