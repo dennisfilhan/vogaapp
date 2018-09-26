@@ -75,8 +75,8 @@
         <nav class="amado-nav">
             <ul>
                 <li class="active"><a href="/">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Helpdesk</a></li>
+                <li><a href="{{ route('about') }}">About</a></li>
+                <li><a href="{{ route('helpdesk') }}">Helpdesk</a></li>
                 {{--<li><a href="product-details.html">Product</a></li>--}}
                 {{--<li><a href="cart.html">Cart</a></li>--}}
                 {{--<li><a href="checkout.html">Checkout</a></li>--}}
@@ -118,7 +118,7 @@
         <!-- Social Button -->
         <div class="social-info d-flex justify-content-center{{--justify-content-between--}}">
             {{--<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>--}}
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/voga.vouchergame/?hl=id" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             &nbsp;
             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             {{--<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>--}}

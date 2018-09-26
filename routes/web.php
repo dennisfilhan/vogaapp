@@ -33,3 +33,6 @@ Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function() {
     Route::post('submit', 'CheckoutController@submit')->name('submit');
 });
 
+Route::get('/about', 'ShopController@about')->name('about');
+Route::get('/helpdesk', 'ShopController@helpdesk')->name('helpdesk');
+

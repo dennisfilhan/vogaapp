@@ -18,4 +18,14 @@ class ShopController extends Controller
     {
         return view('shop.product', ['product' => $product]);
     }
+
+    /*
+     * Misc
+     * */
+    public function about(){
+        return view('about');
+    }
+    public function helpdesk(){
+        return view('helpdesk');
+    }
 }
